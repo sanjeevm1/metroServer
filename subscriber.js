@@ -1,7 +1,7 @@
 
 
 
-const client=new Paho.MQTT.Client("broker.emqx.io",8083,process.env.SUB);
+const client=new Paho.MQTT.Client("broker.emqx.io",8083,"sanjuSubscriber");
 
 client.connect({
     onSuccess:()=>{console.log("client connected");client.subscribe("display");}
